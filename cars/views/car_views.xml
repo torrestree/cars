@@ -1,0 +1,23 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_car_tree" model="ir.ui.view">
+            <field name="name">cars.car.tree</field>
+            <field name="model">cars.car</field>
+            <field name="arch" type="xml">
+                <tree string="车辆列表">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_car" model="ir.actions.act_window">
+            <field name="name">车辆</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">cars.car</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="view_car_tree"/>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>
